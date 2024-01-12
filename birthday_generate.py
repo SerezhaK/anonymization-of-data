@@ -15,9 +15,11 @@ def generate_day(month: int, year: int):
 def generation_date_of_birth(count: int):
     probabilities = age_probability_distributions_st_petersburg
     answer = []
+
     for _ in range(count):
         value_for_check = random.random() * 100
 
+        # получаем году согласно распредлению вероятности
         for i in probabilities:
             if value_for_check < i[0]:
                 age_range = i[1]
@@ -34,6 +36,7 @@ def generation_date_of_birth(count: int):
             f"{day}.{month}.{year}",
             today_year - year
         ])
+
     return answer
 
 
