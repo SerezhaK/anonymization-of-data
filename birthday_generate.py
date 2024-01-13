@@ -19,7 +19,7 @@ def generation_date_of_birth(count: int):
     for _ in range(count):
         value_for_check = random.random() * 100
 
-        # получаем году согласно распредлению вероятности
+        # получаем год согласно распредлению вероятности
         for i in probabilities:
             if value_for_check < i[0]:
                 age_range = i[1]
