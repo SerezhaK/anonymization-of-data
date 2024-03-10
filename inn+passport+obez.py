@@ -6,12 +6,11 @@ s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def generation_passports(count):
     answer = [[], []]
-
-    for _ in range(count):
+    for n in range(count):
         t = ""
         x = random.uniform(0, 100)
         for j in range(11):
-            if veroiatnost[j] > x:
+            if (veroiatnost[j] > x):
                 w = j
                 break
         if (w == 5 or w == 7 or w == 9 or w == 10):  # паспорта Армении,Кыргызстана,Молдовы и Беларуси
@@ -49,5 +48,18 @@ def generation_passports(count):
         answer[1].append(inn)
     return answer
 
+#Обезличивание
+passport_inn = generation_passports(100)
+only_passport = []
+only_inn = []
+for x in range(len(passport_inn[0])):
+    only_passport.append(0)
+for x in range(len(passport_inn[1])):
+    only_inn.append(0)
+inn_passport_obez = [only_passport,only_inn]
+print(inn_passport_obez)
 
-print()
+
+
+
+
