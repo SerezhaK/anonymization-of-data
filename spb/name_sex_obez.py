@@ -47,13 +47,12 @@ def generation_sex_and_fio(cnt):
     return massiv_sex_and_fio
 
 
-# Обезличивание
-FIO_sex = generation_sex_and_fio(100)
-FIO_sex_obez = []
-for x in range(len(FIO_sex)):
-    a = []
-    a.append(FIO_sex[x][0])
-    a.append('0_o')
-    FIO_sex_obez.append(a)
-print(FIO_sex)
-print(FIO_sex_obez)
+#Обезличивание
+def obez_FIO(generate):
+    FIO_sex_obez = []
+    for x in range(len(generate)):
+        a = []
+        a.append(generate[x][0])
+        a.append('0_o')
+        FIO_sex_obez.append(a)
+    return(FIO_sex_obez)
