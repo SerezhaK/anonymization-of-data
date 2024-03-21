@@ -23,10 +23,7 @@ def obez_sum_goods(sum_goods):
             obez_sum_goods.append('От 16 до 20 товаров')
         elif sum_goods[x] > 20:
             obez_sum_goods.append('Более 20 товаров')
-    print(sum_goods)
-    print(obez_sum_goods)
+    return obez_sum_goods
+  
 
 
-a = sum_goods_generation(1000)
-b = obez_sum_goods(a)
-print(b)
