@@ -34,15 +34,15 @@ def phones_generation(cnt):
 
 
 # Обезличивание
-phones = phones_generation(100)
-phones_obez = []
-for x in range(len(phones)):
-    if phones[x][0:2] in mtc:
-        phones_obez.append('МТС')
-    elif phones[x][0:2] in megaphone:
-        phones_obez.append('МЕГАФОН')
-    elif phones[x][0:2] in tele2:
-        phones_obez.append('ТЕЛЕ2')
-    elif phones[x][0:2] in beeline:
-        phones_obez.append('Билайн')
-print(phones_generation(100))
+def obez_phones(phones):
+    phones_obez = []
+    for x in range(len(phones)):
+        if phones[x][0:2] in mtc:
+            phones_obez.append('МТС')
+        elif phones[x][0:2] in megaphone:
+            phones_obez.append('МЕГАФОН')
+        elif phones[x][0:2] in tele2:
+            phones_obez.append('ТЕЛЕ2')
+        elif phones[x][0:2] in beeline:
+            phones_obez.append('Билайн')
+    return phones_obez
