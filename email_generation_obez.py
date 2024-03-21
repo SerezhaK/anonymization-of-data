@@ -22,13 +22,14 @@ def email_adress_generation(cnt):
 
 
 # Обезличивание
-email = email_adress_generation(10)
-email_obez = []
-for x in range(len(email)):
-    if "@gmail.com" in email[x]:
-        email_obez.append('gmail.com')
-    elif "@mail.ru" in email[x]:
-        email_obez.append('mail.ru')
-    elif "@yandex.ru" in email[x]:
-        email_obez.append('@yandex.ru')
-print(email, email_obez)
+def obez_email(email):
+
+    email_obez=[]
+    for x in range(len(email)):
+        if "@gmail.com" in email[x]:
+            email_obez.append('gmail.com')
+        elif "@mail.ru" in email[x]:
+            email_obez.append('mail.ru')
+        elif "@yandex.ru" in email[x]:
+            email_obez.append('@yandex.ru')
+    return email_obez
