@@ -4905,9 +4905,9 @@ def generation_adress(cnt):
 
 
 # Обезличивание
-def obez_adress(cnt):
-    start_data = generation_adress(cnt)
-
+def obez_adress(start_data):
+    answer = []
+        
     def get_key(d, value):
         for k, v in d.items():
             if v == value:
@@ -4915,38 +4915,39 @@ def obez_adress(cnt):
 
     for i in range(len(start_data)):
         if start_data[i] in KRON:
-            return get_key(Raion, KRON)
+            answer.append(get_key(Raion, KRON))
         elif start_data[i] in KURORT:
-            return get_key(Raion, KURORT)
+            answer.append(get_key(Raion, KURORT))
         elif start_data[i] in NEVA:
-            return get_key(Raion, NEVA)
+             answer.append(get_key(Raion, NEVA))
         elif start_data[i] in MOSCOW:
-            return get_key(Raion, MOSCOW)
+            answer.append(get_key(Raion, MOSCOW))
         elif start_data[i] in Kirov_raion:
-            return get_key(Raion, Kirov_raion)
+            answer.append(get_key(Raion, Kirov_raion))
         elif start_data[i] in Kolpinskiy_raion:
-            return get_key(Raion, Kolpinskiy_raion)
+            answer.append(get_key(Raion, Kolpinskiy_raion))
         elif start_data[i] in Krasnoselskiy_raion:
-            return get_key(Raion, Krasnoselskiy_raion)
+            answer.append(get_key(Raion, Krasnoselskiy_raion))
         elif start_data[i] in Krasnogvardeysky_raion:
-            return get_key(Raion, Krasnogvardeysky_raion)
+            answer.append(get_key(Raion, Krasnogvardeysky_raion))
         elif start_data[i] in Admiralteiskiy_raion:
-            return get_key(Raion, Admiralteiskiy_raion)
+            answer.append(get_key(Raion, Admiralteiskiy_raion))
         elif start_data[i] in Kalininskiy_raion:
-            return get_key(Raion, Kalininskiy_raion)
+            answer.append(get_key(Raion, Kalininskiy_raion))
         elif start_data[i] in Viborgskiy:
-            return get_key(Raion, Viborgskiy)
+            answer.append(get_key(Raion, Viborgskiy))
         elif start_data[i] in Vasiliostovskiy:
-            return get_key(Raion, Vasiliostovskiy)
+            answer.append(get_key(Raion, Vasiliostovskiy))
         elif start_data[i] in Frunzeskiy:
-            return get_key(Raion, Frunzeskiy)
+            answer.append(get_key(Raion, Frunzeskiy))
         elif start_data[i] in Centr:
-            return get_key(Raion, Centr)
+            answer.append(get_key(Raion, Centr))
         elif start_data[i] in Petrodvor:
-            return get_key(Raion, Petrodvor)
+            answer.append(get_key(Raion, Petrodvor))
         elif start_data[i] in Petrogradskiy:
-            return get_key(Raion, Petrogradskiy)
+            answer.append(get_key(Raion, Petrogradskiy))
         elif start_data[i] in Pushkinskiy:
-            return get_key(Raion, Pushkinskiy)
+            answer.append(get_key(Raion, Pushkinskiy))
         elif start_data[i] in Primorskiy:
-            return get_key(Raion, Primorskiy)
+            answer.append(get_key(Raion, Primorskiy))
+    return answer
