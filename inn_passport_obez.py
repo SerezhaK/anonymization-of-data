@@ -50,12 +50,10 @@ def generation_passports(count):
 
 
 # Обезличивание
-passport_inn = generation_passports(100)
-only_passport = []
-only_inn = []
-for x in range(len(passport_inn[0])):
-    only_passport.append(0)
-for x in range(len(passport_inn[1])):
-    only_inn.append(0)
-inn_passport_obez = [only_passport, only_inn]
-print(inn_passport_obez)
+def obez_passport_inn(generation):
+    answer = []
+    a = [0,0]
+    for x in range(len(generation)):
+        answer.append(a)
+    return answer
+
