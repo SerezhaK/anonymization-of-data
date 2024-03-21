@@ -88,52 +88,51 @@ def generation_profession(cnt):
 
 
 # Обезличивание
-Professions_income = generation_profession(100)
-Obez_professions_income = []
-for x in range(len(Professions_income)):
-    a = []
+def obez_pro_inc(Professions_income):
+    Obez_professions_income = []
+    for x in range(len(Professions_income)):
+        a = []
 
-    if Professions_income[x] in IT:
-        a.append('IT')
-    if Professions_income[x] in Education:
-        a.append('Education')
-    if Professions_income[x] in Marketing:
-        a.append('Marketing')
-    if Professions_income[x] in Design:
-        a.append('Design')
-    if Professions_income[x] in Accounting:
-        a.append('Accounting')
-    if Professions_income[x] in Office:
-        a.append('Office')
-    if Professions_income[x] in Jurisprudence:
-        a.append('Jurisprudence')
-    if Professions_income[x] in Medicine:
-        a.append('Medicine')
-    if Professions_income[x] in Trading:
-        a.append('Trading')
-    if Professions_income[x] in Beauty:
-        a.append('Beauty')
-    if Professions_income[x] in Production:
-        a.append('Production')
-    if Professions_income[x] in Transport:
-        a.append('Transport')
-    if Professions_income[x] in Construction:
-        a.append('Construction')
-    if Professions_income[x] in Safety:
-        a.append('Safety')
-    if Professions_income[x] in Agricultural_industry:
-        a.append('Agricultural_industry')
-    if Professions_income[x] in Handyman:
-        a.append('Handyman')
-    if Professions_income[x] in Food:
-        a.append('Food')
+        if Professions_income[x] in IT:
+            a.append('IT')
+        if Professions_income[x] in Education:
+            a.append('Образование')
+        if Professions_income[x] in Marketing:
+            a.append('Маркетинг')
+        if Professions_income[x] in Design:
+            a.append('Дизайн')
+        if Professions_income[x] in Accounting:
+            a.append('Бухгалтерия')
+        if Professions_income[x] in Office:
+            a.append('Офис')
+        if Professions_income[x] in Jurisprudence:
+            a.append('Юриспруденция')
+        if Professions_income[x] in Medicine:
+            a.append('Медицина')
+        if Professions_income[x] in Trading:
+            a.append('Торговля')
+        if Professions_income[x] in Beauty:
+            a.append('Красота')
+        if Professions_income[x] in Production:
+            a.append('Производство')
+        if Professions_income[x] in Transport:
+            a.append('Транспорт')
+        if Professions_income[x] in Construction:
+            a.append('Строительство')
+        if Professions_income[x] in Safety:
+            a.append('Безопасность')
+        if Professions_income[x] in Agricultural_industry:
+            a.append('Сельское хозяйство')
+        if Professions_income[x] in Handyman:
+            a.append('Разнорабочий')
+        if Professions_income[x] in Food:
+            a.append('Питание')
 
-    procent = random.uniform(0.85, 1.15)
-    zp = Professions_income[x][1].replace(' ', '')
-    zp = zp.replace('₽', '')
-    zp = str(int(int(zp) * procent)) + ' ₽'
-    a.append(zp)
+        procent = random.uniform(0.85, 1.15)
+        zp = Professions_income[x][1].replace(' ', '')
+        zp = zp.replace('₽', '')
+        zp = str(int(int(zp) * procent)) + ' ₽'
+        a.append(zp)
 
-    Obez_professions_income.append(a)
-print(Professions_income)
-print(Obez_professions_income)
+        Obez_professions_income.append(a)
+    return (Obez_professions_income)
