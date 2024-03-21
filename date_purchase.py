@@ -21,21 +21,21 @@ def date_generation(cnt):
 
 
 # Обезличивание
-winter = ['12', '1', '2']
-spring = ['3', '4', '5']
-summer = ['6', '7', '8']
-autumn = ['9', '10', '11']
-date_of_purchase = date_generation(100)
-obez_date_of_purchase = []
-for x in range(len(date_of_purchase)):
-    mounth = date_of_purchase[x][date_of_purchase[x].index('.') + 1:date_of_purchase[x].rfind('.')]
-    if mounth in winter:
-        obez_date_of_purchase.append('Зима')
-    elif mounth in spring:
-        obez_date_of_purchase.append('Весна')
-    elif mounth in summer:
-        obez_date_of_purchase.append('Лето')
-    elif mounth in autumn:
-        obez_date_of_purchase.append('Осень')
-print(date_of_purchase)
-print(obez_date_of_purchase)
+def obez_date(date_of_purchase):
+    winter = ['12', '1', '2']
+    spring = ['3', '4', '5']
+    summer = ['6', '7', '8']
+    autumn = ['9', '10', '11']
+    obez_date_of_purchase = []
+    for x in range(len(date_of_purchase)):
+        mounth = date_of_purchase[x][date_of_purchase[x].index('.') + 1:date_of_purchase[x].rfind('.')]
+        if mounth in winter:
+            obez_date_of_purchase.append('Зима')
+        elif mounth in spring:
+            obez_date_of_purchase.append('Весна')
+        elif mounth in summer:
+            obez_date_of_purchase.append('Лето')
+        elif mounth in autumn:
+            obez_date_of_purchase.append('Осень')
+    return obez_date_of_purchase
+a = date_generation(10)
