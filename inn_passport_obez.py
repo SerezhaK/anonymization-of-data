@@ -6,40 +6,39 @@ s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def generation_passports(count):
     answer = [[], []]
-
-    for _ in range(count):
+    for n in range(count):
         t = ""
         x = random.uniform(0, 100)
         for j in range(11):
             if veroiatnost[j] > x:
                 w = j
                 break
-        if (w == 5 or w == 7 or w == 9 or w == 10):  # паспорта Армении,Кыргызстана,Молдовы и Беларуси
+        if w == 5 or w == 7 or w == 9 or w == 10:  # паспорта Армении,Кыргызстана,Молдовы и Беларуси
             t = s[random.randint(0, 25)] + s[random.randint(0, 25)]
             for i in range(7):
                 t += str(random.randint(0, 9))
-        elif (w == 6 or w == 8):  # паспорта Азербайджана и Туркменистана
+        elif w == 6 or w == 8:  # паспорта Азербайджана и Туркменистана
             t = s[random.randint(0, 25)]
             for i in range(7):
                 t += str(random.randint(0, 9))
-        elif (w == 0):  # паспорта России
+        elif w == 0:  # паспорта России
             for i in range(4):
                 t += str(random.randint(0, 9))
             t += ' '
             for i in range(6):
                 t += str(random.randint(0, 9))
-        elif (w == 1):  # паспорта Таджикистана
+        elif w == 1:  # паспорта Таджикистана
             t = s[random.randint(0, 25)]
             for i in range(6):
                 t += str(random.randint(0, 9))
-        elif (w == 2):  # паспорта Узбекистана
+        elif w == 2:  # паспорта Узбекистана
             for i in range(15):
                 t += str(random.randint(0, 9))
-        elif (w == 3):  # паспорта Казахстана
+        elif w == 3:  # паспорта Казахстана
             t = 'N'
             for i in range(8):
                 t += str(random.randint(0, 9))
-        elif (w == 4):  # паспорта Украины
+        elif w == 4:  # паспорта Украины
             for i in range(9):
                 t += str(random.randint(0, 9))
         inn = ''
@@ -50,4 +49,13 @@ def generation_passports(count):
     return answer
 
 
-print()
+# Обезличивание
+passport_inn = generation_passports(100)
+only_passport = []
+only_inn = []
+for x in range(len(passport_inn[0])):
+    only_passport.append(0)
+for x in range(len(passport_inn[1])):
+    only_inn.append(0)
+inn_passport_obez = [only_passport, only_inn]
+print(inn_passport_obez)

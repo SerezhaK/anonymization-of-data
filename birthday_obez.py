@@ -7,6 +7,7 @@ age_probability_distributions_st_petersburg = [(11.5, [70, 108]), (20.9, [35, 39
 import datetime
 import random
 
+
 def generate_day(month: int, year: int):
     if month in [1, 3, 5, 7, 8, 10, 12]:
         return random.randint(1, 31)
@@ -43,15 +44,11 @@ def generation_date_of_birth(count: int):
     return answer
 
 
-
-
-
-
 # Обезличивание
 birthday = generation_date_of_birth(10)
 birthday_obez = []
 for x in range(len(birthday)):
-    if 0<= birthday[x][1] <= 5:
+    if 0 <= birthday[x][1] <= 5:
         birthday_obez.append('0-5')
     elif 6 <= birthday[x][1] <= 12:
         birthday_obez.append('6-12')

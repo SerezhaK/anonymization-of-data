@@ -1,8 +1,11 @@
 import random
-veroiatnost=[0.8,0.9,0.94,0.97,0.98,0.9888,0.9938,0.9988,0.9998,1]
-veroiatnost2=[0.27,0.62,1]
-paySystem=["2","4","5"]
-bin_banks=["27649","20015","37772","02177","53373","21785","14088","49516","16943","03289"]
+
+veroiatnost = [0.8, 0.9, 0.94, 0.97, 0.98, 0.9888, 0.9938, 0.9988, 0.9998, 1]
+veroiatnost2 = [0.27, 0.62, 1]
+paySystem = ["2", "4", "5"]
+bin_banks = ["27649", "20015", "37772", "02177", "53373", "21785", "14088", "49516", "16943", "03289"]
+
+
 # 02177 райфайзинг
 # 20015 альфабанк
 # 37772 тинька
@@ -16,26 +19,27 @@ bin_banks=["27649","20015","37772","02177","53373","21785","14088","49516","1694
 def generation_bankcard(cnt):
     massiv_cards = []
     for j in range(cnt):
-        bin_card=random.random()
-        pay_system=random.random()
-        card=''
+        bin_card = random.random()
+        pay_system = random.random()
+        card = ''
         for i in range(3):
-            if(pay_system<= veroiatnost2[i]):
-                card+=paySystem[i]
+            if pay_system <= veroiatnost2[i]:
+                card += paySystem[i]
                 break
         for i in range(10):
-            if(bin_card<= veroiatnost[i]):
-                card+=bin_banks[i]
+            if bin_card <= veroiatnost[i]:
+                card += bin_banks[i]
                 break
         for i in range(10):
-            card+=str(random.randint(0,9))
+            card += str(random.randint(0, 9))
         massiv_cards.append(card)
     return massiv_cards
 
-#Обезличивание
+
+# Обезличивание
 obez_karti_dengi_dva_stvola = []
 karti_dengi_dva_stvola = generation_bankcard(100)
-for x in range (len(karti_dengi_dva_stvola)):
+for x in range(len(karti_dengi_dva_stvola)):
     if karti_dengi_dva_stvola[x][1:6] == '02177':
         if karti_dengi_dva_stvola[x][0] == '2':
             obez_karti_dengi_dva_stvola.append('Райфайзинг/Mastercard')
