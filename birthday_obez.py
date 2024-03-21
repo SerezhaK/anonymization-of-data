@@ -45,32 +45,31 @@ def generation_date_of_birth(count: int):
 
 
 # Обезличивание
-birthday = generation_date_of_birth(10)
-birthday_obez = []
-for x in range(len(birthday)):
-    if 0 <= birthday[x][1] <= 5:
-        birthday_obez.append('0-5')
-    elif 6 <= birthday[x][1] <= 12:
-        birthday_obez.append('6-12')
-    elif 13 <= birthday[x][1] <= 17:
-        birthday_obez.append('13-17')
-    elif 18 <= birthday[x][1] <= 25:
-        birthday_obez.append('18-25')
-    elif 26 <= birthday[x][1] <= 34:
-        birthday_obez.append('26-34')
-    elif 35 <= birthday[x][1] <= 45:
-        birthday_obez.append('35-45')
-    elif 46 <= birthday[x][1] <= 54:
-        birthday_obez.append('46-54')
-    elif 55 <= birthday[x][1] <= 65:
-        birthday_obez.append('55-65')
-    elif 66 <= birthday[x][1] <= 74:
-        birthday_obez.append('66-74')
-    elif 75 <= birthday[x][1] <= 84:
-        birthday_obez.append('75-84')
-    elif 85 <= birthday[x][1] <= 95:
-        birthday_obez.append('85-95')
-    elif birthday[x][1] > 95:
-        birthday_obez.append('>95')
-print(birthday)
-print(birthday_obez)
+def obez_birthday(birthday):
+    birthday_obez = []
+    for x in range(len(birthday)):
+        if 0<= birthday[x][1] <= 5:
+            birthday_obez.append('0-5')
+        elif 6 <= birthday[x][1] <= 12:
+            birthday_obez.append('6-12')
+        elif 13 <= birthday[x][1] <= 17:
+            birthday_obez.append('13-17')
+        elif 18 <= birthday[x][1] <= 25:
+            birthday_obez.append('18-25')
+        elif 26 <= birthday[x][1] <= 34:
+            birthday_obez.append('26-34')
+        elif 35 <= birthday[x][1] <= 45:
+            birthday_obez.append('35-45')
+        elif 46 <= birthday[x][1] <= 54:
+            birthday_obez.append('46-54')
+        elif 55 <= birthday[x][1] <= 65:
+            birthday_obez.append('55-65')
+        elif 66 <= birthday[x][1] <= 74:
+            birthday_obez.append('66-74')
+        elif 75 <= birthday[x][1] <= 84:
+            birthday_obez.append('75-84')
+        elif 85 <= birthday[x][1] <= 95:
+            birthday_obez.append('85-95')
+        elif birthday[x][1] > 95:
+            birthday_obez.append('>95')
+    return birthday_obez
