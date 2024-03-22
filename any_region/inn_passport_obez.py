@@ -52,7 +52,7 @@ def generation_passports(count):
 def obez_passport_inn(generation):
     answer = []
     a = [0,0]
-    for x in range(len(generation)):
+    for x in range(len(generation[0])):
         answer.append(a)
     return answer
 
