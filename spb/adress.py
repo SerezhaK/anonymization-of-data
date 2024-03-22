@@ -1,4 +1,5 @@
 import random
+
 KRON = ['Кронштадское шоссе 1', 'Кронштадское шоссе 1Б', 'Кронштадское шоссе 2', 'Кронштадское шоссе 2Б',
         'Кронштадское шоссе 5В', 'Кронштадское шоссе 6к1', 'Кронштадское шоссе 6к2', 'Кронштадское шоссе 7',
         'Кронштадское шоссе 7ББ', 'Кронштадское шоссе 7ВБ', 'Кронштадское шоссе 7ВВ',
@@ -4887,9 +4888,9 @@ Raion = {'Адмиралтейский район': Admiralteiskiy_raion, 'Ку�
          'Приморский район': Primorskiy,
          'Пушкинский район': Pushkinskiy}
 
-Raionchiki=[KRON, Pushkinskiy,Primorskiy, Petrodvor, Petrogradskiy, Centr, Frunzeskiy, Viborgskiy,
-            Vasiliostovskiy, Kalininskiy_raion, Admiralteiskiy_raion, Krasnoselskiy_raion, Krasnogvardeysky_raion,
-            Kolpinskiy_raion, Kirov_raion, NEVA, MOSCOW, KURORT]
+Raionchiki = [KRON, Pushkinskiy, Primorskiy, Petrodvor, Petrogradskiy, Centr, Frunzeskiy, Viborgskiy,
+              Vasiliostovskiy, Kalininskiy_raion, Admiralteiskiy_raion, Krasnoselskiy_raion, Krasnogvardeysky_raion,
+              Kolpinskiy_raion, Kirov_raion, NEVA, MOSCOW, KURORT]
 
 Names_of_products = ['Пятёрочка', 'Магнит', 'Лента', 'Вкусвилл', 'Spar', 'Перекрёсток', 'Дикси', 'Семишагофф',
                      'Ермолино', 'Светофор']
@@ -4983,53 +4984,48 @@ def generation_adress(cnt):
 
 # Обезличивание
 def obez_adress(start_data):
-    answer = []
-
     def get_key(d, value):
         for k, v in d.items():
             if v == value:
                 return k
 
-    # for i in range(len(start_data)):
+    # for i in range(len(data)):
     if start_data in KRON:
-        answer.append(get_key(Raion, KRON))
+        return get_key(Raion, KRON)
     elif start_data in KURORT:
-        answer.append(get_key(Raion, KURORT))
+        return get_key(Raion, KURORT)
     elif start_data in NEVA:
-        answer.append(get_key(Raion, NEVA))
+        return get_key(Raion, NEVA)
     elif start_data in MOSCOW:
-        answer.append(get_key(Raion, MOSCOW))
+        return get_key(Raion, MOSCOW)
     elif start_data in Kirov_raion:
-        answer.append(get_key(Raion, Kirov_raion))
+        return get_key(Raion, Kirov_raion)
     elif start_data in Kolpinskiy_raion:
-        answer.append(get_key(Raion, Kolpinskiy_raion))
+        return get_key(Raion, Kolpinskiy_raion)
     elif start_data in Krasnoselskiy_raion:
-        answer.append(get_key(Raion, Krasnoselskiy_raion))
+        return get_key(Raion, Krasnoselskiy_raion)
     elif start_data in Krasnogvardeysky_raion:
-        answer.append(get_key(Raion, Krasnogvardeysky_raion))
+        return get_key(Raion, Krasnogvardeysky_raion)
     elif start_data in Admiralteiskiy_raion:
-        answer.append(get_key(Raion, Admiralteiskiy_raion))
+        return get_key(Raion, Admiralteiskiy_raion)
     elif start_data in Kalininskiy_raion:
-        answer.append(get_key(Raion, Kalininskiy_raion))
+        return get_key(Raion, Kalininskiy_raion)
     elif start_data in Viborgskiy:
-        answer.append(get_key(Raion, Viborgskiy))
+        return get_key(Raion, Viborgskiy)
     elif start_data in Vasiliostovskiy:
-        answer.append(get_key(Raion, Vasiliostovskiy))
+        return get_key(Raion, Vasiliostovskiy)
     elif start_data in Frunzeskiy:
-        answer.append(get_key(Raion, Frunzeskiy))
+        return get_key(Raion, Frunzeskiy)
     elif start_data in Centr:
-        answer.append(get_key(Raion, Centr))
+        return get_key(Raion, Centr)
     elif start_data in Petrodvor:
-        answer.append(get_key(Raion, Petrodvor))
+        return get_key(Raion, Petrodvor)
     elif start_data in Petrogradskiy:
-        answer.append(get_key(Raion, Petrogradskiy))
+        return get_key(Raion, Petrogradskiy)
     elif start_data in Pushkinskiy:
-        answer.append(get_key(Raion, Pushkinskiy))
+        return get_key(Raion, Pushkinskiy)
     elif start_data in Primorskiy:
-        answer.append(get_key(Raion, Primorskiy))
-    return answer
-
-
+        return get_key(Raion, Primorskiy)
 
 
 # Обезличивание прайса
@@ -5064,5 +5060,7 @@ Slovar = {'Пятёрочка': 1, 'Магнит': 2, 'Лента': 3, 'Вкус
           'Доктор столетов': 8, 'Аптека 36,6': 9, 'Первая помощь': 10, 'Дом Книги': 1, 'Буквоед': 2,
           'Подписные издания': 3, 'Листва': 4, 'Книжная лавка писателей': 5, 'Желтый двор': 6,
           'Книга Лавка': 7, 'Академкнига': 8, 'Поляндрия': 9, 'Слово': 10}
+
+
 def obez_name(name_shop):
     return Slovar[name_shop]

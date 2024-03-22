@@ -93,46 +93,43 @@ def obez_pro_inc(Professions_income):
     a = []
 
     if Professions_income in IT:
-            a.append('IT')
+        a.append('IT')
     if Professions_income in Education:
-            a.append('Образование')
+        a.append('Образование')
     if Professions_income in Marketing:
-            a.append('Маркетинг')
+        a.append('Маркетинг')
     if Professions_income in Design:
-            a.append('Дизайн')
+        a.append('Дизайн')
     if Professions_income in Accounting:
-            a.append('Бухгалтерия')
+        a.append('Бухгалтерия')
     if Professions_income in Office:
-            a.append('Офис')
+        a.append('Офис')
     if Professions_income in Jurisprudence:
-            a.append('Юриспруденция')
+        a.append('Юриспруденция')
     if Professions_income in Medicine:
-            a.append('Медицина')
+        a.append('Медицина')
     if Professions_income in Trading:
-            a.append('Торговля')
+        a.append('Торговля')
     if Professions_income in Beauty:
-            a.append('Красота')
+        a.append('Красота')
     if Professions_income in Production:
-            a.append('Производство')
+        a.append('Производство')
     if Professions_income in Transport:
-            a.append('Транспорт')
+        a.append('Транспорт')
     if Professions_income in Construction:
-            a.append('Строительство')
+        a.append('Строительство')
     if Professions_income in Safety:
-            a.append('Безопасность')
+        a.append('Безопасность')
     if Professions_income in Agricultural_industry:
-            a.append('Сельское хозяйство')
+        a.append('Сельское хозяйство')
     if Professions_income in Handyman:
-            a.append('Разнорабочий')
+        a.append('Разнорабочий')
     if Professions_income in Food:
-            a.append('Питание')
+        a.append('Питание')
 
     procent = random.uniform(0.85, 1.15)
     zp = Professions_income[1].replace(' ', '')
     zp = zp.replace('₽', '')
     zp = str(int(int(zp) * procent)) + ' ₽'
     a.append(zp)
-
-    Obez_professions_income.append(a)
-    return (a)
-
+    return a

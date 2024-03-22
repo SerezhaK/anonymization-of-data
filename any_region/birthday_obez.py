@@ -46,30 +46,27 @@ def generation_date_of_birth(count: int):
 
 # Обезличивание
 def obez_birthday(birthday):
-    birthday_obez = []
-    for x in range(len(birthday)):
-        if 0<= birthday[x][1] <= 5:
-            birthday_obez.append('0-5')
-        elif 6 <= birthday[x][1] <= 12:
-            birthday_obez.append('6-12')
-        elif 13 <= birthday[x][1] <= 17:
-            birthday_obez.append('13-17')
-        elif 18 <= birthday[x][1] <= 25:
-            birthday_obez.append('18-25')
-        elif 26 <= birthday[x][1] <= 34:
-            birthday_obez.append('26-34')
-        elif 35 <= birthday[x][1] <= 45:
-            birthday_obez.append('35-45')
-        elif 46 <= birthday[x][1] <= 54:
-            birthday_obez.append('46-54')
-        elif 55 <= birthday[x][1] <= 65:
-            birthday_obez.append('55-65')
-        elif 66 <= birthday[x][1] <= 74:
-            birthday_obez.append('66-74')
-        elif 75 <= birthday[x][1] <= 84:
-            birthday_obez.append('75-84')
-        elif 85 <= birthday[x][1] <= 95:
-            birthday_obez.append('85-95')
-        elif birthday[x][1] > 95:
-            birthday_obez.append('>95')
-    return birthday_obez
+    if birthday <= 5:
+        return '0-5'
+    elif 6 <= birthday <= 12:
+        return '6-12'
+    elif 13 <= birthday <= 17:
+        return '13-17'
+    elif 18 <= birthday <= 25:
+        return '18-25'
+    elif 26 <= birthday <= 34:
+        return '26-34'
+    elif 35 <= birthday <= 45:
+        return '35-45'
+    elif 46 <= birthday <= 54:
+        return '46-54'
+    elif 55 <= birthday <= 65:
+        return '55-65'
+    elif 66 <= birthday <= 74:
+        return '66-74'
+    elif 75 <= birthday <= 84:
+        return '75-84'
+    elif 85 <= birthday <= 95:
+        return '85-95'
+    elif birthday > 95:
+        return '>95'

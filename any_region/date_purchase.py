@@ -26,15 +26,13 @@ def obez_date(date_of_purchase):
     spring = ['3', '4', '5']
     summer = ['6', '7', '8']
     autumn = ['9', '10', '11']
-    obez_date_of_purchase = []
 
     mounth = date_of_purchase[date_of_purchase.index('.') + 1:date_of_purchase.rfind('.')]
     if mounth in winter:
-        obez_date_of_purchase.append('Зима')
+        return 'Зима'
     elif mounth in spring:
-        obez_date_of_purchase.append('Весна')
+        return 'Весна'
     elif mounth in summer:
-        obez_date_of_purchase.append('Лето')
+        return 'Лето'
     elif mounth in autumn:
-        obez_date_of_purchase.append('Осень')
-    return obez_date_of_purchase
+        return 'Осень'

@@ -17,7 +17,7 @@ from spb.profession_income_spb_obez import generation_profession
 def massive_generation(count: int):
     """
     profession : [ [ profession, income], [profession, ...], ...]
-    address : [ address, address , ...]
+    address : [ [home_address, category, shop_name, shop_gps, price], ...]
     phones : [phone_number, phone_number, ... ]
     sex_and_name : [ [sex, surname, name], [sex ... ] ...]
 
@@ -29,7 +29,7 @@ def massive_generation(count: int):
     sum_goods : [sum_goods, sum_goods, ...]
     """
     profession = generation_profession(count)
-    address = generation_adress(count)
+    address_and_shop_info = generation_adress(count)
     phones = phones_generation(count)
     sex_and_name = generation_sex_and_fio(count)
     bankcard = generation_bankcard(count)
@@ -54,7 +54,7 @@ def massive_generation(count: int):
                 date_of_birth[i][0],
                 date_of_birth[i][1],
                 bankcard[i],
-                address[i][0],
+                address_and_shop_info[i][0],
                 inn_passport[1][i],
                 inn_passport[0][i],
                 profession[i][0],
@@ -62,13 +62,12 @@ def massive_generation(count: int):
                 phones[i],
                 email[i],
                 date_of_purchase[i],
-                address[i][3],
-                address[i][2],
-                address[i][1],
+                address_and_shop_info[i][3],
+                address_and_shop_info[i][2],
+                address_and_shop_info[i][1],
                 sum_goods[i],
-                address[i][4]
+                address_and_shop_info[i][4]
             )
         )
 
     return answer
-       
