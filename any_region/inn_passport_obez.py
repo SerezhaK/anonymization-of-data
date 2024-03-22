@@ -5,7 +5,7 @@ s = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def generation_passports(count):
-    answer = [[], []]
+    answer_pasport, answer_inn = [], []
     for n in range(count):
         t = ""
         x = random.uniform(0, 100)
@@ -44,10 +44,9 @@ def generation_passports(count):
         inn = ''
         for i in range(12):
             inn += str(random.randint(0, 9))
-        answer[0].append(t)
-        answer[1].append(inn)
-    return answer
-
+        answer_pasport.append(t)
+        answer_inn.append(inn)
+    return answer_pasport, answer_inn
 
 # Обезличивание
 def obez_passport_inn(generation):

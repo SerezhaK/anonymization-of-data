@@ -19,40 +19,39 @@ def generation_sex_and_fio(cnt):
     for i in range(cnt):
         sex_and_fio = []
         q = random.random()
-        if (q < Probably_of_sex[0]):
+        second_name = random.random()
+        if q < Probably_of_sex[0]:
             sex_and_fio.append(Sex[0])
-            second_name = random.random()
             for j in range(8):
-                if (second_name < Probably_of_Fms[j]):
+                if second_name < Probably_of_Fms[j]:
                     sex_and_fio.append(Female_surnames[j])
                     break
             name = random.random()
             for j in range(10):
-                if (name < Probably_of_Fmn[j]):
+                if name < Probably_of_Fmn[j]:
                     sex_and_fio.append(Female_names[j])
                     break
         else:
             sex_and_fio.append(Sex[1])
-            second_name = random.random()
             for j in range(8):
-                if (second_name < Probably_of_Ms[j]):
+                if second_name < Probably_of_Ms[j]:
                     sex_and_fio.append(Male_surnames[j])
                     break
             name = random.random()
             for j in range(10):
-                if (name < Probably_of_Mn[j]):
+                if name < Probably_of_Mn[j]:
                     sex_and_fio.append(Male_names[j])
                     break
         massiv_sex_and_fio.append(sex_and_fio)
     return massiv_sex_and_fio
 
 
-#Обезличивание
+# Обезличивание
 def obez_FIO(generate):
-    FIO_sex_obez = []
+    fio_sex_obez = []
     for x in range(len(generate)):
         a = []
         a.append(generate[x][0])
         a.append('0_o')
-        FIO_sex_obez.append(a)
-    return(FIO_sex_obez)
+        fio_sex_obez.append(a)
+    return fio_sex_obez
