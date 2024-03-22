@@ -4891,63 +4891,178 @@ Raionchiki=[KRON, Pushkinskiy,Primorskiy, Petrodvor, Petrogradskiy, Centr, Frunz
             Vasiliostovskiy, Kalininskiy_raion, Admiralteiskiy_raion, Krasnoselskiy_raion, Krasnogvardeysky_raion,
             Kolpinskiy_raion, Kirov_raion, NEVA, MOSCOW, KURORT]
 
+Names_of_products = ['Пятёрочка', 'Магнит', 'Лента', 'Вкусвилл', 'Spar', 'Перекрёсток', 'Дикси', 'Семишагофф',
+                     'Ермолино', 'Светофор']
+Probably_of_Np = [0.242199894, 0.476996298, 0.515600212, 0.630883131, 0.635642517, 0.698572184,
+                  0.852459016, 0.921734532, 0.99259651, 1]
+
+Names_of_zoo = ['Petshop', 'ЗооОптТорг.рф', 'Четыре лапы', 'Золотая рыбка', 'Филя', 'Зооэкспресс', 'Завр', 'ZooOlimp']
+Probably_of_Nz = [0.370629, 0.646853, 0.77972, 0.877622, 0.954445, 0.98941, 0.996403, 1]
+
+Names_of_flowers = ['Цветовик', 'Цветомания', 'Fmart', 'Оранж', 'Цветоландия', 'Onlu flowers', 'Три букета',
+                    'Butonflowers']
+Probably_of_Nf = [0.511013, 0.76652, 0.854626, 0.938326, 0.977974, 0.99119, 0.995595, 1]
+
+Names_of_clothes = ['RE', 'OSTIN', 'Griol', 'Lacoste', 'Unique Fabric', 'Truvor', 'Maker Select', 'Familia', 'Diplomat',
+                    'Only Jeans']
+Probably_of_Nc = [0.261438, 0.477124, 0.679738, 0.777777, 0.875816, 0.921568, 0.960784, 0.980392, 0.993464, 1]
+
+Names_of_makeup = ['Улыбка радуги', 'Магнит Косметики', 'Подружка', 'Лэтуаль', 'Рив Гощ', 'Cream.Shop',
+                   'Золотое яблоко',
+                   'Новая Заря', 'GiGi']
+Probably_of_Nm = [0.450628, 0.727109, 0.825852, 0.91202, 0.978455, 0.991022, 0.994613, 0.998204, 1]
+
+Names_of_jewellery = ['585 Gold', 'Sunlight', 'Sokolov', 'Ювелир Карат', 'Jeweller Karat', 'Ювелирторг', 'Platina',
+                      'Avgvst',
+                      'Dafna', 'Espaname']
+Probably_of_Nj = [0.248587571, 0.485875706, 0.661016949, 0.762711864, 0.86440678, 0.960451977,
+                  0.983050847, 0.988700565, 0.994350282, 1]
+
+Names_of_built = ['Метизы', 'Максидом', 'Леруа Мерлен', 'Строитель', 'Петрович', 'Домашний мастер',
+                  'СтройМаг', 'OBI', 'Мастеровой', 'Славдом']
+Probably_of_Nb = [0.265060241, 0.409638554, 0.554216867, 0.698795181, 0.771084337, 0.843373494, 0.915662651,
+                  0.951807229, 0.975903614, 1]
+
+Names_of_technology = ['DNS', 'М.Видео', 'Эльдорадо', 'Xiaomi', 'Ситилинк', 'Технопарк', 'Полюс', 'Dr.Head']
+Probably_of_Nt = [0.512820513, 0.705128205, 0.846153846, 0.916666667, 0.974358974, 0.987179487, 0.993589744, 1]
+
+Names_of_toy = ['Детский мир', 'Мои любимые игрушки', 'Машинки', 'Город детства', 'Твое детство', 'Коллекция игрушек',
+                'Ameli',
+                'ToyToy.Club', 'Милая игрушка', 'Лукоморье', 'Волшебный мир']
+Probably_of_Ntoy = [0.763636364, 0.8, 0.836363636, 0.872727273, 0.890909091, 0.909090909, 0.927272727,
+                    0.945454545, 0.963636364, 0.981818182, 1]
+
+Names_of_pharmacy = ['Невис', 'Озерки', 'Столички', 'Будь здоров', 'Аптеки Плюс', 'Петербургские аптеки', 'Апрель',
+                     'Доктор столетов', 'Аптека 36,6', 'Первая помощь']
+Probably_of_Nph = [0.210638298, 0.403191489, 0.591489362, 0.682978723, 0.762765957, 0.836170213, 0.908510638,
+                   0.95106383, 0.980851064, 1]
+
+Names_of_book = ['Дом Книги', 'Буквоед', 'Подписные издания', 'Листва', 'Книжная лавка писателей', 'Желтый двор',
+                 'Книга Лавка', 'Академкнига', 'Поляндрия', 'Слово']
+Probably_of_Nbook = [0.903225806, 0.913978495, 0.924731183, 0.935483871, 0.946236559, 0.956989247, 0.967741935,
+                     0.978494624, 0.989247312, 1]
+
+Shop_categories = [['Магазин продуктов', Probably_of_Np, Names_of_products, 107.5],
+                   ['Зоомагазин', Probably_of_Nz, Names_of_zoo, 1000],
+                   ['Магазин цветов', Probably_of_Nf, Names_of_flowers, 1684],
+                   ['Магазин одежды', Probably_of_Nc, Names_of_clothes, 1232],
+                   ['Магазин косметики и товаров для дома', Probably_of_Nm, Names_of_makeup, 898],
+                   ['Магазин ювелирных изделий', Probably_of_Nj, Names_of_jewellery, 7600],
+                   ['Строительный магазин', Probably_of_Nb, Names_of_built, 2000],
+                   ['Магазин цифровой и бытовой техники', Probably_of_Nt, Names_of_technology, 5860],
+                   ['Магазин детских игрушек', Probably_of_Ntoy, Names_of_toy, 1500],
+                   ['Аптека', Probably_of_Nph, Names_of_pharmacy, 349.6],
+                   ['Книжный магазин', Probably_of_Nbook, Names_of_book, 271]]
+Probably_of_Sc = [0.459839357, 0.497991968, 0.517068273, 0.552208835, 0.607429719, 0.649598394,
+                  0.661646586, 0.691767068, 0.733935743, 0.915662651, 1]
+
 
 # Функция
 def generation_adress(cnt):
-    massiv_adress=[]
+    massiv_shops = []
     for i in range(cnt):
-        q=random.randint(0,len(Raionchiki)-1)
-        w=random.randint(0,len(Raionchiki[q])-1)
-        massiv_adress.append(Raionchiki[q][w])
-    return massiv_adress
-
-
+        q = random.random()
+        w = random.random()
+        stoimost = 0
+        magaz = 0
+        for j in range(len(Probably_of_Sc)):
+            if (q <= Probably_of_Sc[j]):
+                for k in range(len(Shop_categories[j][1])):
+                    if (w <= Shop_categories[j][1][k]):
+                        f = random.randint(0, len(Raionchiki) - 1)
+                        p = random.randint(0, len(Raionchiki[f]) - 1)
+                        m = random.randint(0, len(Raionchiki[f]) - 1)
+                        stoimost = random.randint(1, 20) * Shop_categories[j][3]
+                        massiv_shops.append(
+                            [Raionchiki[f][p], Shop_categories[j][0], Shop_categories[j][2][k], Raionchiki[f][m],
+                             stoimost])
+                        break
+                break
+    return (massiv_shops)
 
 
 # Обезличивание
 def obez_adress(start_data):
     answer = []
-        
+
     def get_key(d, value):
         for k, v in d.items():
             if v == value:
                 return k
 
-    for i in range(len(start_data)):
-        if start_data[i] in KRON:
-            answer.append(get_key(Raion, KRON))
-        elif start_data[i] in KURORT:
-            answer.append(get_key(Raion, KURORT))
-        elif start_data[i] in NEVA:
-             answer.append(get_key(Raion, NEVA))
-        elif start_data[i] in MOSCOW:
-            answer.append(get_key(Raion, MOSCOW))
-        elif start_data[i] in Kirov_raion:
-            answer.append(get_key(Raion, Kirov_raion))
-        elif start_data[i] in Kolpinskiy_raion:
-            answer.append(get_key(Raion, Kolpinskiy_raion))
-        elif start_data[i] in Krasnoselskiy_raion:
-            answer.append(get_key(Raion, Krasnoselskiy_raion))
-        elif start_data[i] in Krasnogvardeysky_raion:
-            answer.append(get_key(Raion, Krasnogvardeysky_raion))
-        elif start_data[i] in Admiralteiskiy_raion:
-            answer.append(get_key(Raion, Admiralteiskiy_raion))
-        elif start_data[i] in Kalininskiy_raion:
-            answer.append(get_key(Raion, Kalininskiy_raion))
-        elif start_data[i] in Viborgskiy:
-            answer.append(get_key(Raion, Viborgskiy))
-        elif start_data[i] in Vasiliostovskiy:
-            answer.append(get_key(Raion, Vasiliostovskiy))
-        elif start_data[i] in Frunzeskiy:
-            answer.append(get_key(Raion, Frunzeskiy))
-        elif start_data[i] in Centr:
-            answer.append(get_key(Raion, Centr))
-        elif start_data[i] in Petrodvor:
-            answer.append(get_key(Raion, Petrodvor))
-        elif start_data[i] in Petrogradskiy:
-            answer.append(get_key(Raion, Petrogradskiy))
-        elif start_data[i] in Pushkinskiy:
-            answer.append(get_key(Raion, Pushkinskiy))
-        elif start_data[i] in Primorskiy:
-            answer.append(get_key(Raion, Primorskiy))
+    # for i in range(len(start_data)):
+    if start_data in KRON:
+        answer.append(get_key(Raion, KRON))
+    elif start_data in KURORT:
+        answer.append(get_key(Raion, KURORT))
+    elif start_data in NEVA:
+        answer.append(get_key(Raion, NEVA))
+    elif start_data in MOSCOW:
+        answer.append(get_key(Raion, MOSCOW))
+    elif start_data in Kirov_raion:
+        answer.append(get_key(Raion, Kirov_raion))
+    elif start_data in Kolpinskiy_raion:
+        answer.append(get_key(Raion, Kolpinskiy_raion))
+    elif start_data in Krasnoselskiy_raion:
+        answer.append(get_key(Raion, Krasnoselskiy_raion))
+    elif start_data in Krasnogvardeysky_raion:
+        answer.append(get_key(Raion, Krasnogvardeysky_raion))
+    elif start_data in Admiralteiskiy_raion:
+        answer.append(get_key(Raion, Admiralteiskiy_raion))
+    elif start_data in Kalininskiy_raion:
+        answer.append(get_key(Raion, Kalininskiy_raion))
+    elif start_data in Viborgskiy:
+        answer.append(get_key(Raion, Viborgskiy))
+    elif start_data in Vasiliostovskiy:
+        answer.append(get_key(Raion, Vasiliostovskiy))
+    elif start_data in Frunzeskiy:
+        answer.append(get_key(Raion, Frunzeskiy))
+    elif start_data in Centr:
+        answer.append(get_key(Raion, Centr))
+    elif start_data in Petrodvor:
+        answer.append(get_key(Raion, Petrodvor))
+    elif start_data in Petrogradskiy:
+        answer.append(get_key(Raion, Petrogradskiy))
+    elif start_data in Pushkinskiy:
+        answer.append(get_key(Raion, Pushkinskiy))
+    elif start_data in Primorskiy:
+        answer.append(get_key(Raion, Primorskiy))
     return answer
+
+
+
+
+# Обезличивание прайса
+def obez_price(a):
+    procent = random.uniform(0.85, 1.15)
+    return int(a * procent)
+
+
+# обезличивание имени магазина
+Slovar = {'Пятёрочка': 1, 'Магнит': 2, 'Лента': 3, 'Вкусвилл': 4, 'Spar': 5, 'Перекрёсток': 6, 'Дикси': 7,
+          'Семишагофф': 8,
+          'Ермолино': 9, 'Светофор': 10, 'Petshop': 1, 'ЗооОптТорг.рф': 2, 'Четыре лапы': 3, 'Золотая рыбка': 4,
+          'Филя': 5, 'Зооэкспресс': 6, 'Завр': 7, 'ZooOlimp': 8, 'Цветовик': 1, 'Цветомания': 2, 'Fmart': 3, 'Оранж': 4,
+          'Цветоландия': 5, 'Onlu flowers': 6, 'Три букета': 7,
+          'Butonflowers': 8, 'RE': 1, 'OSTIN': 2, 'Griol': 3, 'Lacoste': 4, 'Unique Fabric': 5, 'Truvor': 6,
+          'Maker Select': 7, 'Familia': 8, 'Diplomat': 9,
+          'Only Jeans': 10, 'Улыбка радуги': 1, 'Магнит Косметики': 2, 'Подружка': 3, 'Лэтуаль': 4, 'Рив Гощ': 5,
+          'Cream.Shop': 6,
+          'Золотое яблоко': 7,
+          'Новая Заря': 8, 'GiGi': 9, '585 Gold': 1, 'Sunlight': 2, 'Sokolov': 3, 'Ювелир Карат': 4,
+          'Jeweller Karat': 5, 'Ювелирторг': 6, 'Platina': 7,
+          'Avgvst': 8,
+          'Dafna': 9, 'Espaname': 10, 'Метизы': 1, 'Максидом': 2, 'Леруа Мерлен': 3, 'Строитель': 4, 'Петрович': 5,
+          'Домашний мастер': 6,
+          'СтройМаг': 7, 'OBI': 8, 'Мастеровой': 9, 'Славдом': 10, 'DNS': 1, 'М.Видео': 2, 'Эльдорадо': 3, 'Xiaomi': 4,
+          'Ситилинк': 5, 'Технопарк': 6, 'Полюс': 7, 'Dr.Head': 8,
+          'Детский мир': 1, 'Мои любимые игрушки': 2, 'Машинки': 3, 'Город детства': 4, 'Твое детство': 5,
+          'Коллекция игрушек': 6,
+          'Ameli': 7,
+          'ToyToy.Club': 8, 'Милая игрушка': 9, 'Лукоморье': 10, 'Волшебный мир': 11, 'Невис': 1, 'Озерки': 2,
+          'Столички': 3, 'Будь здоров': 4, 'Аптеки Плюс': 5, 'Петербургские аптеки': 6, 'Апрель': 7,
+          'Доктор столетов': 8, 'Аптека 36,6': 9, 'Первая помощь': 10, 'Дом Книги': 1, 'Буквоед': 2,
+          'Подписные издания': 3, 'Листва': 4, 'Книжная лавка писателей': 5, 'Желтый двор': 6,
+          'Книга Лавка': 7, 'Академкнига': 8, 'Поляндрия': 9, 'Слово': 10}
+def obez_name(name_shop):
+    return Slovar[name_shop]
