@@ -54,7 +54,7 @@ def massive_generation(count: int):
                 date_of_birth[i][0],
                 date_of_birth[i][1],
                 bankcard[i],
-                address[i],
+                address[i][0],
                 inn_passport[1][i],
                 inn_passport[0][i],
                 profession[i][0],
@@ -62,9 +62,13 @@ def massive_generation(count: int):
                 phones[i],
                 email[i],
                 date_of_purchase[i],
-                # there must be shops_gps, shops_name, categories, sum_of_goods and price here
+                address[i][3],
+                address[i][2],
+                address[i][1],
                 sum_goods[i],
+                address[i][4]
             )
         )
 
     return answer
+       
