@@ -39,84 +39,83 @@ def generation_bankcard(cnt):
 # Обезличивание
 def obez_bankcard(karti_dengi_dva_stvola):
     obez_karti_dengi_dva_stvola = []
-    for x in range(len(karti_dengi_dva_stvola)):
-        if karti_dengi_dva_stvola[x][1:6] == '02177':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '02177':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('Райфайзинг/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('Райфайзинг/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('Райфайзинг/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '20015':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '20015':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('Альфабанк/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('Альфабанк/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('Альфабанк/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '37772':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '37772':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('Тинькофф/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('Тинькофф/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('Тинькофф/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '27649':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '27649':
+         if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('Сбербанк/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+         if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('Сбербанк/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+         if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('Сбербанк/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '53373':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '53373':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('МТС Банк/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('МТС Банк/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('МТС Банк/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '21785':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '21785':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('Свой Банк/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('Свой Банк/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('Свой Банк/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '14088':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '14088':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('Кредит Европа Банк/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('Кредит Европа Банк/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('Кредит Европа Банк/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '49516':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '49516':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('ОТП Банк/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('ОТП Банк/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('ОТП Банк/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '16943':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '16943':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('ФОРА/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('ФОРА/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('ФОРА/МИР')
 
-        if karti_dengi_dva_stvola[x][1:6] == '03289':
-            if karti_dengi_dva_stvola[x][0] == '2':
+    if karti_dengi_dva_stvola[1:6] == '03289':
+        if karti_dengi_dva_stvola[0] == '2':
                 obez_karti_dengi_dva_stvola.append('SBI/Mastercard')
-            if karti_dengi_dva_stvola[x][0] == '4':
+        if karti_dengi_dva_stvola[0] == '4':
                 obez_karti_dengi_dva_stvola.append('SBI/VISA')
-            if karti_dengi_dva_stvola[x][0] == '5':
+        if karti_dengi_dva_stvola[0] == '5':
                 obez_karti_dengi_dva_stvola.append('SBI/МИР')
     return obez_karti_dengi_dva_stvola
