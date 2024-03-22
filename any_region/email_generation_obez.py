@@ -25,11 +25,11 @@ def email_adress_generation(cnt):
 def obez_email(email):
 
     email_obez=[]
-    for x in range(len(email)):
-        if "@gmail.com" in email[x]:
-            email_obez.append('gmail.com')
-        elif "@mail.ru" in email[x]:
-            email_obez.append('mail.ru')
-        elif "@yandex.ru" in email[x]:
-            email_obez.append('@yandex.ru')
+    if "@gmail.com" in email:
+        email_obez.append('gmail.com')
+    elif "@mail.ru" in email:
+        email_obez.append('mail.ru')
+    elif "@yandex.ru" in email:
+        email_obez.append('@yandex.ru')
     return email_obez
+
